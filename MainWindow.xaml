@@ -15,12 +15,64 @@
         <Grid/>
         <TabControl Grid.Column="0">
             <TabItem Header="打开串口">
-                <GroupBox Grid.Column="0" Header="选项"/>
+                <GroupBox Grid.Column="0" Header="选项">
+                    <Grid VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <!-- This column will receive all remaining width -->
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.Row="0" Grid.Column="0" Width="50" Content="刷新" HorizontalAlignment="Left" Margin="0,2" />
+                        <Button Grid.Row="0" Grid.Column="1" Width="50" Content="打开" HorizontalAlignment="Left" Margin="0,2" />
+
+                        <Label Grid.Column="0" Grid.Row="1" Content="串口" Margin="0,2" />
+                        <ComboBox Grid.Column="1" Grid.Row="1" Width="100" Margin="0,2" />
+
+                        <Label Grid.Column="0" Grid.Row="2" Content="波特率" Margin="0,2" />
+                        <ComboBox SelectedIndex="0" Grid.Column="1" Grid.Row="2" Width="100" Margin="0,2">
+                            <ComboBoxItem Content="9600" />
+                            <ComboBoxItem Content="115200" />
+                        </ComboBox>
+
+                        <Label Grid.Column="0" Grid.Row="3" Content="数据位" Margin="0,2" />
+                        <ComboBox SelectedIndex="0" Grid.Column="1" Grid.Row="3" Width="100" Margin="0,2">
+                            <ComboBoxItem Content="8" />
+                            <ComboBoxItem Content="7" />
+                            <ComboBoxItem Content="6" />
+                            <ComboBoxItem Content="5" />
+                        </ComboBox>
+
+                        <Label Grid.Column="0" Grid.Row="4" Content="校验位" Margin="0,2" />
+                        <ComboBox SelectedIndex="0" Grid.Column="1" Grid.Row="4" Width="100" Margin="0,2">
+                            <ComboBoxItem Content="无校验(None)" />
+                            <ComboBoxItem Content="奇校验(Odd)" />
+                            <ComboBoxItem Content="偶校验(Even)" />
+                            <ComboBoxItem Content="0校验(Space)" />
+                            <ComboBoxItem Content="1校验(Mark)" />
+                        </ComboBox>
+
+                        <Label Grid.Column="0" Grid.Row="5" Content="停止位" Margin="0,2" />
+                        <ComboBox SelectedIndex="0" Grid.Column="1" Grid.Row="5" Width="100" Margin="0,2">
+                            <ComboBoxItem Content="1" />
+                            <ComboBoxItem Content="2" />
+                        </ComboBox>
+                    </Grid>
+                </GroupBox>
             </TabItem>
             <TabItem Header="打开UDP/TCP">
                 <GroupBox Grid.Column="0" Header="选项"/>
             </TabItem>
         </TabControl>
+
         <GroupBox Grid.Column="1" Header="串口/网络页面"/>
     </Grid>
 
