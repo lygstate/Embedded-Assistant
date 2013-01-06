@@ -27,17 +27,16 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Border BorderBrush="Black">
 
-        <Grid Background="White" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <!-- This column will receive all remaining width -->
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid/>
-            <GroupBox Grid.Column="0" Header="串口/网络打开选项"/>
-            <GroupBox Grid.Column="1" Header="串口/网络页面"/>
-        </Grid>
-    </Border>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <!-- This column will receive all remaining width -->
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid/>
+        <GroupBox Grid.Column="0" Header="串口/网络打开选项"/>
+        <GroupBox Grid.Column="1" Header="串口/网络页面"/>
+    </Grid>
+
 </Window>
