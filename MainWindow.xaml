@@ -4,28 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Embedded_Assistant.MainWindow"
         Title="嵌入式调试助手" d:DesignWidth="1280" d:DesignHeight="720">
     <Window.Resources>
-        <Style TargetType="{x:Type TabItem}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TabItem}">
-                        <Grid>
-                            <Border 
-                 x:Name="Border"
-                 Background="LightBlue"
-                 BorderBrush="Black" 
-                 BorderThickness="1,1,1,1" 
-                 CornerRadius="6,6,0,0" >
-                                <ContentPresenter x:Name="ContentSite"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   ContentSource="Header"
-                   Margin="12,2,12,2"/>
-                            </Border>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
     </Window.Resources>
 
     <Grid>
@@ -35,7 +13,14 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid/>
-        <GroupBox Grid.Column="0" Header="串口/网络打开选项"/>
+        <TabControl Grid.Column="0">
+            <TabItem Header="打开串口">
+                <GroupBox Grid.Column="0" Header="选项"/>
+            </TabItem>
+            <TabItem Header="打开UDP/TCP">
+                <GroupBox Grid.Column="0" Header="选项"/>
+            </TabItem>
+        </TabControl>
         <GroupBox Grid.Column="1" Header="串口/网络页面"/>
     </Grid>
 
