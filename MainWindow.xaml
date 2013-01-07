@@ -36,13 +36,10 @@
                             <Button Grid.Row="0" Grid.Column="1" Width="50" Content="打开" HorizontalAlignment="Left" Margin="0,2" />
 
                             <Label Grid.Column="0" Grid.Row="1" Content="串口" Margin="0,2" />
-                            <ComboBox Grid.Column="1" Grid.Row="1" Width="100" Margin="0,2" HorizontalAlignment="Left" />
+                            <ComboBox Name="ComNamesComboBox" Grid.Column="1" Grid.Row="1" Width="100" Margin="0,2" HorizontalAlignment="Left" />
 
                             <Label Grid.Column="0" Grid.Row="2" Content="波特率" Margin="0,2" />
-                            <ComboBox SelectedIndex="0" Grid.Column="1" Grid.Row="2" Width="100" Margin="0,2" HorizontalAlignment="Left">
-                                <ComboBoxItem Content="9600" />
-                                <ComboBoxItem Content="115200" />
-                            </ComboBox>
+                            <ComboBox Name="BaudratesComboBox" SelectedIndex="0" Grid.Column="1" Grid.Row="2" Width="100" Margin="0,2" HorizontalAlignment="Left" />
 
                             <Label Grid.Column="0" Grid.Row="3" Content="数据位" Margin="0,2" />
                             <ComboBox SelectedIndex="0" Grid.Column="1" Grid.Row="3" Width="100" Margin="0,2" HorizontalAlignment="Left">
